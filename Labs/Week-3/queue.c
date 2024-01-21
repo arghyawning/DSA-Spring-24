@@ -49,7 +49,7 @@ int deQueue(struct queue *q)
         if (q->front == q->rear)
             initQueue(q);
         else
-            q->front = (q->front + 1) % 100;
+            q->front = (q->front + 1) % N;
     }
     return r;
 }
@@ -63,7 +63,7 @@ void display(struct queue q)
     }
     else
     {
-        for (i = q.front; i != q.rear; i = (i + 1) % 5)
+        for (i = q.front; i != q.rear; i = (i + 1) % N)
         {
             printf("%d ", q.contents[i]);
         }
