@@ -2,4 +2,4 @@
 
 ### Topics
 
-C Basics, Pointers, Structs, Usage of Header Files
+C Basics, Pointers, Structs, Usage of Header Files, Linked Lists
