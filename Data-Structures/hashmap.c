@@ -16,7 +16,7 @@ typedef struct hash_map {
 } hash_map;
 
 // Change the hash function as you want. Currenty (ax+ b) mod size for integers.
-int hash(int key, int size) {
+int hash(T key, int size) {
     return (14071LL * key + 21347LL) % size;
 }
 
