@@ -7,12 +7,12 @@ typedef struct ht_node {
     T key;
     int value;
     struct ht_node *next;
-};
+} ht_node;
 
 typedef struct hash_map {
     ht_node **buckets;
     int size;
-    T default_value;
+    int default_value;
 } hash_map;
 
 // Change the hash function as you want. Currenty (ax+ b) mod size for integers.
