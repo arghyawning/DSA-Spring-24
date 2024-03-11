@@ -2,7 +2,7 @@
 
 
 // Replace int with the type of data you want to store in the linked list.
-typedef T int;
+typedef int T;
 
 typedef struct node {
     T data;
