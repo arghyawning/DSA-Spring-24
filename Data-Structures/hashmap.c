@@ -1,7 +1,7 @@
 /// Data Structure for Hash Map
 
 // Replace int with the type of data you want to store in the hash map.
-typedef T int;
+typedef int T;
 
 typedef struct ht_node {
     T key;
@@ -16,7 +16,7 @@ typedef struct hash_map {
 } hash_map;
 
 // Change the hash function as you want. Currenty (ax+ b) mod size for integers.
-int hash(T key, int size) {
+int get_hash(T key, int size) {
     return (14071LL * key + 21347LL) % size;
 }
 
@@ -33,7 +33,7 @@ hash_map *create_hash_map(int size) {
 }
 
 void insert(hash_map *hm, T key, int value) {
-    int index = hash(key, hm->size);
+    int index = get_hash(key, hm->size);
     ht_node* head = hm->buckets[index];
     while (head != NULL) {
         if (head->key == key) {
@@ -50,7 +50,7 @@ void insert(hash_map *hm, T key, int value) {
 }
 
 int search(hash_map *hm, T key) {
-    int index = hash(key, hm->size);
+    int index = get_hash(key, hm->size);
     ht_node* head = hm->buckets[index];
     while (head != NULL) {
         if (head->key == key) {
